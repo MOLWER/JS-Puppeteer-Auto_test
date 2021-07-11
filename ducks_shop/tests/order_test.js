@@ -13,7 +13,7 @@ Scenario('test something', ({ I }) => {
     I.waitForVisible(`//h1[@class='title']`);
     I.fillField(`//input[@type='number']`,4); //вводим кол-во уточек
     I.click(`//button[@type='submit']`); //нажимаем кнопку
-    //I.waitForVisible(`//span[@class='quantity' and text()='4']`); //убедились ,что в корзине нужное кол-во
+    I.waitForVisible(`//span[@class='quantity' and text()='4']`); //убедились ,что в корзине нужное кол-во
     I.click(`//div[@id='cart-wrapper']//a[text()='Checkout »']`); //переходим в корзину
     I.fillField(`//input[@type='number']`,5),3; //увеличиваем кол-во уточек на 1
     I.click(`//button[@value='Update']`); //нажимаем кнопку 'Update'
